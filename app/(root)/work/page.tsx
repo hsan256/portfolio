@@ -1,7 +1,7 @@
 import React from "react";
 
 import SearchForm from "@/components/SearchForm";
-import Filter from "@/components/Filter";
+import Filters from "@/components/Filters";
 
 const Page = () => {
   return (
@@ -16,7 +16,7 @@ const Page = () => {
           <SearchForm />
         </section>
 
-        <Filter />
+        <Filters />
       </main>
     </div>
   );
