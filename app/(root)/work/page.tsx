@@ -1,9 +1,16 @@
-import React from "react";
-
 import SearchForm from "@/components/SearchForm";
 import Filters from "@/components/Filters";
+import { getProjects, getProjectsPlaylist } from "@/sanity/actions";
 
-const Page = () => {
+const Page = async () => {
+  const projects = await getProjects({
+    query: "",
+    category: "",
+    page: "1",
+  });
+
+  console.log(projects);
+
   return (
     <div>
       <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col">
@@ -17,6 +24,7 @@ const Page = () => {
         </section>
 
         <Filters />
+
       </main>
     </div>
   );
