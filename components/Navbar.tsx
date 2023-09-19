@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -7,10 +7,10 @@ const Navbar = () => {
       <div className="flex-between mx-auto w-full max-w-screen-2xl px-6 xs:px-8 sm:px-16">
         <Link href="/">
           {/* could be a logo or something */}
-          <Image src='/avatar.png' width={40} height={40} alt='Hassan Avatar' /> 
+          <Image src="/avatar.png" width={40} height={40} alt="Hassan Avatar" />
         </Link>
 
-        <Image 
+        <Image
           src="/hamburger-menu.svg"
           width={30}
           height={30}
@@ -20,25 +20,24 @@ const Navbar = () => {
 
         <ul className="flex-center gap-x-3 max-md:hidden md:gap-x-10">
           <li className="body-text text-gradient_blue-purple !font-bold">
-            <Link
-              href="https://jsmastery.pro/next13"
-              target="_blank"
-            >
-              Next.js 13.4 Course
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li className="body-text !font-normal">
-            <Link
-              href="https://jsmastery.pro/masterclass"
-              target="_blank"
-            >
-              Masterclass
-            </Link>
+            <Link href="/work">Work</Link>
+          </li>
+          <li className="body-text !font-normal">
+            <Link href="/blogs">Blogs</Link>
+          </li>
+          <li className="body-text !font-normal">
+            <Link href="/about">About Me</Link>
+          </li>
+          <li className="body-text !font-normal">
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
