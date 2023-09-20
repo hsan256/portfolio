@@ -53,7 +53,7 @@ const schema = {
             { title: 'Frontend', value: 'frontend' },
             { title: 'Backend', value: 'backend' },
             { title: 'Blockchain', value: 'blockchain' },
-            { title: 'Artificial Intelligence', value: 'artificial-intelligence' },
+            { title: 'Artificial Intelligence', value: 'ai' },
             { title: 'Other', value: 'other' }
           ],
           layout: 'checkbox' // Render as checkboxes for multiple selection
