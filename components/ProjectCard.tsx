@@ -11,7 +11,7 @@ interface Props {
   githubLink: string;
 }
 
-const ResourceCard = ({ id, title, image, views, githubLink }: Props) => {
+const ProjectCard = ({ id, title, image, views, githubLink }: Props) => {
   return (
     <Card className="w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]">
       <Link href={githubLink} target="_blank">
@@ -56,4 +56,4 @@ const ResourceCard = ({ id, title, image, views, githubLink }: Props) => {
   )
 }
 
-export default ResourceCard
+export default ProjectCard

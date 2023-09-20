@@ -1,8 +1,8 @@
 import SearchForm from "@/components/SearchForm";
 import Filters from "@/components/Filters";
 import { getProjects, getProjectsPlaylist } from "@/sanity/actions";
-import ResourceCard from "@/components/ResourceCard";
 import Header from "@/components/Header";
+import ProjectCard from "@/components/ProjectCard";
 
 export const revalidate = 900;
 
@@ -42,7 +42,7 @@ const Page = async ({ searchParams }: Props) => {
           <div className="mt-12 flex w-full flex-wrap justify-center gap-16 sm:justify-start">
             {projects?.length > 0 ? (
               projects.map((resource: any) => (
-                <ResourceCard
+                <ProjectCard
                   key={resource._id}
                   title={resource.title}
                   id={resource._id}
