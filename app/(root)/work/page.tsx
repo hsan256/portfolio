@@ -12,12 +12,12 @@ interface Props {
 
 const Page = async ({ searchParams }: Props) => {
   const projects = await getProjects({
-    query: searchParams?.query || '',
-    category: searchParams?.category || '',
-    page: '1'
+    query: searchParams?.query || "",
+    category: searchParams?.category || "",
+    page: "1",
   });
 
-  console.log(projects)
+  const projectsPlaylist = await getProjectsPlaylist();
 
   return (
     <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col">
@@ -41,14 +41,14 @@ const Page = async ({ searchParams }: Props) => {
 
           <div className="mt-12 flex w-full flex-wrap justify-center gap-16 sm:justify-start">
             {projects?.length > 0 ? (
-              projects.map((resource: any) => (
+              projects.map((project: any) => (
                 <ProjectCard
-                  key={resource._id}
-                  title={resource.title}
-                  id={resource._id}
-                  image={resource.image}
-                  views={resource.views}
-                  githubLink={resource.githubLink}
+                  key={project._id}
+                  title={project.title}
+                  id={project._id}
+                  image={project.image}
+                  views={project.views}
+                  githubLink={project.githubLink}
                 />
               ))
             ) : (
@@ -57,6 +57,27 @@ const Page = async ({ searchParams }: Props) => {
           </div>
         </section>
       )}
+
+      {projectsPlaylist.map((item: any) => (
+        <section
+          key={item._id}
+          className="flex-center mt-6 w-full flex-col sm:mt-20"
+        >
+          <h1 className="heading3 self-start text-white-800">{item.title}</h1>
+          <div className="mt-12 flex w-full flex-wrap justify-center gap-16 sm:justify-start">
+            {item.projects.map((project: any) => (
+              <ProjectCard
+                key={project._id}
+                title={project.title}
+                id={project._id}
+                image={project.image}
+                views={project.views}
+                githubLink={project.githubLink}
+              />
+            ))}
+          </div>
+        </section>
+      ))}
     </main>
   );
 };

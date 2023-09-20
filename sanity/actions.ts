@@ -8,6 +8,7 @@ interface GetProjectsParams {
   page: string;
 }
 
+// Get all the projects when the page loads
 export const getProjectsPlaylist = async () => {
   try {
     const projects = await readClient.fetch(
@@ -31,6 +32,7 @@ export const getProjectsPlaylist = async () => {
   }
 }
 
+// Get all the projects when you search or filter
 export const getProjects = async (params: GetProjectsParams) => {
   const { query, category, page } = params;
 
