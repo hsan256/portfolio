@@ -82,7 +82,7 @@ const Hero = () => {
 
             <Button className="relative flex h-15 cursor-pointer bubble-button flex-center body-semibold z-20 gap-2 bg-gradient-to-r from-[#854CFF] to-[#B573F8] px-6 py-4">
               <Link
-                href="https://drive.google.com/file/d/1keXc1Dgiybo4u7yT1l_5zNiHA_8Ghmnd/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ICRfIxS-8DatGXOHvgqN1C9NMBNKkNau/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

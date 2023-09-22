@@ -8,6 +8,33 @@ interface GetProjectsParams {
   page: string;
 }
 
+// Get all the hero details when the page loads
+export const getHeroDetails = async () => {
+  try {
+    const heroDetails = await readClient.fetch(
+      groq`*[_type == "hero"]{
+        title,
+        name,
+        words,
+        description,
+        socialLinks[]{
+          type,
+          url
+        },
+        email,
+        resumeLink,
+        "image": image.asset->url
+      }`
+    );
+
+    // Considering there's only one hero document, we return the first item
+    return heroDetails[0];
+  } catch (error) {
+    console.error("Error fetching hero details:", error);
+  }
+}
+
+
 // Get all the projects when the page loads
 export const getProjectsPlaylist = async () => {
   try {
