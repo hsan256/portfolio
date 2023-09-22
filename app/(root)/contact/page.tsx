@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Page() {
   const link = "https://calendly.com/";
-  
+
   return (
     <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col overflow-hidden text-white">
       <section className="pt-24 inner-width">
@@ -36,7 +36,7 @@ function Page() {
                   required
                   type="text"
                   id="nameInput"
-                  className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-gray-500"
+                  className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-gray-500 text-gray-900"
                   placeholder="Your Name"
                 />
               </div>
@@ -46,7 +46,7 @@ function Page() {
                   required
                   type="email"
                   id="emailInput"
-                  className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-gray-500"
+                  className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-gray-500 text-gray-900"
                   placeholder="Your Email"
                 />
               </div>
@@ -55,7 +55,7 @@ function Page() {
                   name="message"
                   required
                   id="messageTextarea"
-                  className="w-full px-4 py-2 h-36 bg-opacity-10 border rounded-md placeholder-gray-500"
+                  className="w-full px-4 py-2 h-36 bg-opacity-10 border rounded-md placeholder-gray-500 text-gray-900"
                   placeholder="Your Message"
                 ></textarea>
               </div>
