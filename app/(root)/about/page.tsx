@@ -11,6 +11,7 @@ const page = () => {
   return (
     <>
       <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col overflow-hidden text-white">
+        {/* Hero Section */}
         <section className="custom-paddings inner-width">
           <div className="flex flex-wrap -m-4">
             <div className="w-full sm:w-1/2 p-4 flex justify-center">
@@ -127,7 +128,7 @@ const page = () => {
             </p>
           </div>
         </section>
-
+        {/* Experience Section */}
         <section className="custom-paddings inner-width">
           <div className="flex-between mb-16">
             <h2 className="heading2">Experience</h2>
@@ -222,7 +223,7 @@ const page = () => {
             </div>
           </div>
         </section>
-
+        {/* Skills Section */}
         <section className="custom-paddings inner-width">
           <div className="flex-between mb-16">
             <h2 className="heading2">
@@ -326,7 +327,7 @@ const page = () => {
 			<p className="text-[14px] font-semibold leading-[16px] text-white">TAKE THE QUIZ</p></button> */}
           </div>
         </section>
-
+        {/* Strengths Section */}
         <section className="custom-paddings inner-width">
           <div className="flex-between mb-16">
             <h2 className="heading2">

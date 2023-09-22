@@ -29,7 +29,7 @@ function Page() {
             <h2 className="text-2xl text-center mb-4">
               Simply leave a message
             </h2>
-            <form noValidate className="space-y-6">
+            <form noValidate className="space-y-6" action="https://formspree.io/f/xgejnprg" method="POST">
               <div className="relative">
                 <input
                   name="name"
@@ -37,7 +37,7 @@ function Page() {
                   type="text"
                   id="nameInput"
                   className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-gray-500 text-gray-900"
-                  placeholder="Your Name"
+                  placeholder="Your Name *"
                 />
               </div>
               <div className="relative">
@@ -47,7 +47,7 @@ function Page() {
                   type="email"
                   id="emailInput"
                   className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-gray-500 text-gray-900"
-                  placeholder="Your Email"
+                  placeholder="Your Email *"
                 />
               </div>
               <div className="relative">
@@ -56,7 +56,7 @@ function Page() {
                   required
                   id="messageTextarea"
                   className="w-full px-4 py-2 h-36 bg-opacity-10 border rounded-md placeholder-gray-500 text-gray-900"
-                  placeholder="Your Message"
+                  placeholder="Your Message *"
                 ></textarea>
               </div>
               <button
