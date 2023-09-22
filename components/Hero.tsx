@@ -1,10 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import {
   AiFillLinkedin,
-  AiFillTwitterCircle,
   AiFillGithub,
   AiFillMediumCircle,
   AiOutlineMail,
@@ -12,17 +9,17 @@ import {
   AiOutlineCloudDownload,
 } from "react-icons/ai";
 
-import Typewriter from "typewriter-effect";
 import { Button } from "./ui/button";
-
-const words = [
-  "Software Engineer",
-  "Web Developer",
-  "Blockchain Enthusiast",
-  "Writer",
-];
+import Typist from "./Typist";
 
 const Hero = () => {
+  const words = [
+    "Software Engineer",
+    "Web Developer",
+    "Blockchain Enthusiast",
+    "Writer",
+  ];
+
   return (
     <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col overflow-hidden text-white">
       <section className="flex flex-wrap nav-padding w-full">
@@ -33,13 +30,7 @@ const Hero = () => {
             Hassan
           </h1>
           <h1 className="sm:heading1 xs:heading2 heading3 whitespace-pre-wrap text-gradient_blue-purple">
-            <Typewriter
-              options={{
-                strings: words,
-                autoStart: true,
-                loop: true,
-              }}
-            />
+            <Typist words={words} />
           </h1>
           <p className="paragraph-regular pt-6 text-white-400 max-w-lg">
             I have a passion for technology.
@@ -83,7 +74,8 @@ const Hero = () => {
               <div className="relative flex h-15 cursor-pointer">
                 <div className="absolute -bottom-1 -right-1.5 z-10 flex h-12 w-full rounded-md bg-white"></div>
                 <div className="flex-center body-semibold z-20 h-full w-full gap-2 rounded-md border-2 border-black-200 bg-primary px-6 py-4">
-                  Email Me
+                  <AiOutlineMail className="text-xl" />
+                  <span>Email Me</span>
                 </div>
               </div>
             </Link>
@@ -95,7 +87,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
               >
                 <span className="flex items-center space-x-2">
-                  <AiOutlineCloudDownload className="text-xl" />
+                  <AiOutlineCloudDownload className="text-2xl" />
                   <span>Resume</span>
                 </span>
               </Link>
