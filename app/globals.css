@@ -101,6 +101,10 @@
     @apply sm:p-28 xs:p-8 px-6 py-12;
   }
 
+  .custom-paddings {
+    @apply sm:pl-28 sm:px-28 sm:pt-28 xs:p-8 px-6 py-12;
+  }
+
   .flex-between {
     @apply flex justify-between items-center;
   }
@@ -184,6 +188,7 @@
 }
 
 @media screen and (max-width: 500px) {
+
   .sm-box-5,
   .sm-box-6,
   .sm-box-7,
@@ -228,6 +233,13 @@
   text-fill-color: transparent;
 }
 
+.text-gradient_yellow-orange {
+  background: linear-gradient(90deg, #ff7170, #ffe57f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -235,8 +247,10 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* Animation bubble button*/
@@ -246,10 +260,10 @@
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.bubble-button::before, 
+.bubble-button::before,
 .bubble-button::after,
-.bubble-button > span::before,
-.bubble-button > span::after {
+.bubble-button>span::before,
+.bubble-button>span::after {
   content: '';
   position: absolute;
   border-radius: 50%;
@@ -275,7 +289,7 @@
   animation-delay: 1s;
 }
 
-.bubble-button > span::before {
+.bubble-button>span::before {
   top: 50%;
   left: 10%;
   width: 8px;
@@ -283,7 +297,7 @@
   animation-delay: 1.5s;
 }
 
-.bubble-button > span::after {
+.bubble-button>span::after {
   bottom: 50%;
   right: 10%;
   width: 12px;
@@ -293,14 +307,16 @@
 
 @keyframes bubble-animation {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
+
   50% {
-      transform: translateY(-20px);
-      opacity: 0.5;
+    transform: translateY(-20px);
+    opacity: 0.5;
   }
+
   100% {
-      transform: translateY(-40px);
-      opacity: 0;
+    transform: translateY(-40px);
+    opacity: 0;
   }
 }
