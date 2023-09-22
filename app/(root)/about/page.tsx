@@ -5,6 +5,7 @@ import {
   AiFillLinkedin,
   AiFillMediumCircle,
 } from "react-icons/ai";
+import EmailButton from "@/components/EmailButton";
 
 const page = () => {
   return (
@@ -30,13 +31,8 @@ const page = () => {
                 </p>
               </div>
               <h6 className="text-sm font-semibold">Email Me</h6>
-              <div className="flex items-center">
-                <Link href="mailto:hassan.trabelsi1999@gmail.com">
-                  <span className="flex items-center px-4 py-2 border-2 border-blue-500 bg-blue-500 bg-opacity-20 rounded-full">
-                    hassan.trabelsi1999@gmail.com
-                  </span>
-                </Link>
-              </div>
+
+              <EmailButton />
 
               <div className="space-y-4 p-10">
                 <div className="flex flex-wrap -m-2">
@@ -163,7 +159,7 @@ const page = () => {
                   </div>
 
                   <p className="text-grey-100 body-regular mt-2">
-                    Full-time: June 2022 - Present
+                    June 2022 - Present
                   </p>
                 </div>
               </div>
@@ -192,7 +188,7 @@ const page = () => {
                   </div>
 
                   <p className="text-grey-100 body-regular mt-2">
-                    Full-time: June 2022 - August 2022
+                    June 2022 - August 2022
                   </p>
                 </div>
               </div>
@@ -219,7 +215,7 @@ const page = () => {
                   </div>
 
                   <p className="text-grey-100 body-regular mt-2">
-                    Full-time: June 2021 - August 2021
+                    June 2021 - August 2021
                   </p>
                 </div>
               </div>
@@ -235,10 +231,11 @@ const page = () => {
           </div>
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
             <div className="py-6">
+              {/* icons lib https://devicon.dev/ */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div className="text-center">
                   <Image
-                    src="/assets/icons/technologies/react-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                     width={56}
                     height={56}
                     alt="REACT JS"
@@ -248,7 +245,7 @@ const page = () => {
                 </div>
                 <div className="text-center">
                   <Image
-                    src="/assets/icons/technologies/nextjs-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
                     width={56}
                     height={56}
                     alt="REACT JS"
@@ -258,13 +255,63 @@ const page = () => {
                 </div>
                 <div className="text-center">
                   <Image
-                    src="/assets/icons/technologies/nodejs-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg"
+                    width={56}
+                    height={56}
+                    alt="REACT JS"
+                    className="mx-auto"
+                  />
+                  <h6 className="mt-2">ANGULAR</h6>
+                </div>
+                <div className="text-center">
+                  <Image
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                     width={56}
                     height={56}
                     alt="REACT JS"
                     className="mx-auto"
                   />
                   <h6 className="mt-2">NODE JS</h6>
+                </div>
+                <div className="text-center">
+                  <Image
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                    width={56}
+                    height={56}
+                    alt="REACT JS"
+                    className="mx-auto bg-white rounded-full p-2"
+                  />
+                  <h6 className="mt-2">EXPRESS JS</h6>
+                </div>
+                <div className="text-center">
+                  <Image
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                    width={56}
+                    height={56}
+                    alt="REACT JS"
+                    className="mx-auto"
+                  />
+                  <h6 className="mt-2">MONGODB</h6>
+                </div>
+                <div className="text-center">
+                  <Image
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    width={56}
+                    height={56}
+                    alt="REACT JS"
+                    className="mx-auto"
+                  />
+                  <h6 className="mt-2">JAVASCRIPT</h6>
+                </div>
+                <div className="text-center">
+                  <Image
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                    width={56}
+                    height={56}
+                    alt="REACT JS"
+                    className="mx-auto"
+                  />
+                  <h6 className="mt-2">JAVA</h6>
                 </div>
               </div>
             </div>
