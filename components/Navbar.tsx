@@ -1,7 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
+  const getNavLinkClass = (path: string): string => {
+    return pathname === path
+      ? "body-text text-gradient_blue-purple !font-bold"
+      : "body-text !font-normal";
+  };
+
   return (
     <nav className="flex-center fixed top-0 z-50 w-full border-b-2 border-black-200 bg-black-100 py-7 text-white">
       <div className="flex-between mx-auto w-full max-w-screen-2xl px-6 xs:px-8 sm:px-16">
@@ -19,19 +30,19 @@ const Navbar = () => {
         />
 
         <ul className="flex-center gap-x-3 max-md:hidden md:gap-x-10">
-          <li className="body-text text-gradient_blue-purple !font-bold">
+          <li className={getNavLinkClass("/")}>
             <Link href="/">Home</Link>
           </li>
-          <li className="body-text !font-normal">
+          <li className={getNavLinkClass("/work")}>
             <Link href="/work">Work</Link>
           </li>
-          <li className="body-text !font-normal">
+          <li className={getNavLinkClass("/blogs")}>
             <Link href="/blogs">Blogs</Link>
           </li>
-          <li className="body-text !font-normal">
+          <li className={getNavLinkClass("/about")}>
             <Link href="/about">About Me</Link>
           </li>
-          <li className="body-text !font-normal">
+          <li className={getNavLinkClass("/contact")}>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
