@@ -25,7 +25,7 @@ const ProjectCard = ({ id, title, image, views, githubLink }: Props) => {
               alt={title}
             />
           </div>
-          <CardTitle className="text-white paragraph-semibold line-clamp-1 w-full text-left">{title}</CardTitle>
+          <CardTitle className="text-white paragraph-semibold line-clamp-2 w-full text-left">{title}</CardTitle>
         </CardHeader>
       </Link>
       <CardContent className="flex-between mt-4 p-0">

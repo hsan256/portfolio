@@ -13,6 +13,8 @@ import Typist from "@/components/Typist";
 import { Button } from "@/components/ui/button";
 import { getHeroDetails } from "@/sanity/actions";
 
+export const revalidate = 900;
+
 const Page = async () => {
   const heroDetails = await getHeroDetails();
 
@@ -54,7 +56,7 @@ const Page = async () => {
                   case "linkedin":
                     return (
                       <Link href={link.url} target="_blank" key={link.type}>
-                        <span className="text-twitter hover:text-twitter-dark text-2xl">
+                        <span className="text-twitter hover:text-[#0072b1] text-2xl">
                           <AiFillLinkedin />
                         </span>
                       </Link>
@@ -62,7 +64,7 @@ const Page = async () => {
                   case "github":
                     return (
                       <Link href={link.url} target="_blank" key={link.type}>
-                        <span className="text-github hover:text-github-dark text-2xl">
+                        <span className="text-github hover:text-gray-400 text-2xl">
                           <AiFillGithub />
                         </span>
                       </Link>
@@ -70,7 +72,7 @@ const Page = async () => {
                   case "medium":
                     return (
                       <Link href={link.url} target="_blank" key={link.type}>
-                        <span className="text-medium hover:text-medium-dark text-2xl">
+                        <span className="text-medium hover:text-gray-400 text-2xl">
                           <AiFillMediumCircle />
                         </span>
                       </Link>

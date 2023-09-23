@@ -17,8 +17,8 @@ const page = () => {
             <div className="w-full sm:w-1/2 p-4 flex justify-center">
               <Image
                 src="/avatar.png"
-                height={300}
-                width={300}
+                height={391}
+                width={391}
                 className="h-auto w-70"
                 alt="it's hassan"
               />
@@ -26,7 +26,7 @@ const page = () => {
 
             <div className="w-full sm:w-1/2 p-4 space-y-4">
               <div>
-                <h1 className="text-5xl font-bold">Hassan Trabelsi</h1>
+                <h1 className="text-5xl font-bold">Hassan TRABELSI</h1>
                 <p className="text-lg mt-2 text-gradient_yellow-orange">
                   Full Stack Developer, writer, and a passionate learner.
                 </p>
@@ -71,12 +71,12 @@ const page = () => {
                     href="https://www.linkedin.com/in/hassan-trabelsi/"
                     target="_blank"
                   >
-                    <span className="text-twitter hover:text-twitter-dark text-3xl">
+                    <span className="text-twitter hover:text-[#0072b1] text-3xl">
                       <AiFillLinkedin />
                     </span>
                   </Link>
                   <Link href="https://github.com/hsan256" target="_blank">
-                    <span className="text-github hover:text-github-dark text-3xl">
+                    <span className="text-github hover:text-gray-400 text-3xl">
                       <AiFillGithub />
                     </span>
                   </Link>
@@ -85,7 +85,7 @@ const page = () => {
                     target="_blank"
                   >
                     {" "}
-                    <span className="text-medium hover:text-medium-dark text-3xl">
+                    <span className="text-medium hover:text-gray-400 text-3xl">
                       <AiFillMediumCircle />
                     </span>
                   </Link>

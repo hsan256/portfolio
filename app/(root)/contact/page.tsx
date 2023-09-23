@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 function Page() {
-  const link = "https://calendly.com/";
+  const link = "https://calendly.com/hassan-trabelsi?embed_domain=www.hassan-trabelsi.com&embed_type=Inline&hide_landing_page_details=1&hide_gdpr_banner=1";
 
   return (
     <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col overflow-hidden text-white">

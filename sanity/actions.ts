@@ -86,3 +86,57 @@ export const getProjects = async (params: GetProjectsParams) => {
     console.log(error);
   }
 }
+
+export const getBlogs = async (params: GetProjectsParams) => {
+  const { query, category, page } = params;
+
+  try {
+    const blogs = await readClient.fetch(
+      groq`${buildQuery({
+        type: 'blog',
+        query,
+        category,
+        page: parseInt(page),
+      })}{
+        title,
+        _id,
+        author,
+        excerpt,
+        "coverImage": coverImage.asset->url,
+        publishedDate,
+        platform,
+        originalLink,
+        slug,
+        tags
+      }`
+    );
+
+    return blogs;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const getBlogsPlaylist = async () => {
+  try {
+    const blogs = await readClient.fetch(
+      groq`*[_type == "blogPlaylist"]{
+        _id,
+        title,
+        blogs[0...6]->{
+          title,
+          _id,
+          originalLink,
+          "coverImage": coverImage.asset->url,
+          publishedDate,
+          author,
+          excerpt
+        }
+      }`
+    );
+
+    return blogs;
+  } catch (error) {
+    console.log(error);
+  }
+}

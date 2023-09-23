@@ -10,7 +10,6 @@ import { formUrlQuery } from '@/sanity/utils';
 const SearchForm = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const pathname = usePathname();
 
   const [search, setSearch] = useState('');
 
