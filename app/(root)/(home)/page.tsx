@@ -20,8 +20,8 @@ const Page = async () => {
 
   return (
     <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col overflow-hidden text-white">
-      <section className="flex flex-wrap nav-padding w-full">
-        <div className="flex flex-col justify-center w-full md:w-1/2 p-4">
+      <section className="flex flex-col md:flex-row nav-padding w-full items-center justify-center">
+        <div className="flex flex-col justify-center w-full p-4 md:w-1/2">
           
           <h6 className="text-white text-2xl mb-2">Hey!</h6>
 
@@ -84,7 +84,7 @@ const Page = async () => {
             </span>
           </h6>
 
-          <div className="flex w-full gap-8 pt-7 max-md:flex-col">
+          <div className="flex flex-col md:flex-row w-full gap-4 md:gap-8 pt-7">
             <Link href={`mailto:${heroDetails.email}`}>
               <div className="relative flex h-15 cursor-pointer">
                 <div className="absolute -bottom-1 -right-1.5 z-10 flex h-12 w-full rounded-md bg-white"></div>
