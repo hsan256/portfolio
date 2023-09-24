@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const EmailButton = () => {
-  const email = "hassan.trabelsi1999@gmail.com";
+const EmailButton = ({ email }: { email: string }) => {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {

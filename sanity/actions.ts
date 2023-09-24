@@ -140,3 +140,45 @@ export const getBlogsPlaylist = async () => {
     console.log(error);
   }
 }
+
+export const getAboutMeDetails = async () => {
+  try {
+    const aboutMeDetails = await readClient.fetch(
+      groq`*[_type == "aboutMe"]{
+        name,
+        tagline,
+        "avatar": avatar.asset->url,
+        description[]{
+          children[]{
+            text,
+            "link": marks[0].externalLink.href
+          }
+        },
+        experiences[]{
+          role,
+          company,
+          "companyLogo": companyLogo.asset->url,
+          timeframe,
+          type,
+          currentPosition
+        },
+        skills[]{
+          technology,
+          iconLink,
+          iconWhiteBackground
+        },
+        strengths[]{
+          title,
+          description,
+          "illustration": illustration.asset->url
+        },
+        "email": *[_type == "hero"][0].email, // Fetch the hero email
+        "socialLinks": *[_type == "hero"][0].socialLinks[] // Fetch the hero social links
+      }`
+    );
+
+    return aboutMeDetails[0];
+  } catch (error) {
+    console.error("Error fetching aboutMe details:", error);
+  }
+}

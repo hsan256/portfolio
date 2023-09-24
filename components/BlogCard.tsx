@@ -44,7 +44,7 @@ const BlogCard = ({
           </h3>
         </Link>
 
-        <p className="text-sm text-white-500 line-clamp-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore nobis id illo incidunt vel voluptate dolorem consequatur excepturi eveniet natus?</p>
+        <p className="text-sm text-white-500 line-clamp-3">{excerpt}</p>
         
         <div className="flex items-center justify-between gap-3 pt-2">
           <div className="flex items-center gap-1.5">
