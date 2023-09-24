@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   description: 'Meet Hassan Trabelsi: The fun-loving full-stack JS engineer! Click to see cool code projects and a few laughs along the way.',
   other: {
     'theme-color': '#0d1117',
-  },
+    "color-scheme": "dark only",
+    // "twitter:image": 'https://',
+    "twitter:card": "summary_large_image",
+    "og:url": "hassan-trabelsi.me",
+    // "og:image": 'https://',
+    "og:type": "website",
+  }
 }
 
 export default function RootLayout({
