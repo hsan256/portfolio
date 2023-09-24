@@ -107,7 +107,7 @@ export const getBlogs = async (params: GetProjectsParams) => {
         platform,
         originalLink,
         slug,
-        tags
+        category
       }`
     );
 

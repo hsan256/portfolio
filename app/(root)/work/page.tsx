@@ -10,6 +10,8 @@ interface Props {
   searchParams: { [key: string]: string | undefined };
 }
 
+const projectLinks = ["all", "fullstack", "frontend", "backend", "blockchain", "ai", "other"];
+
 const Page = async ({ searchParams }: Props) => {
   const projects = await getProjects({
     query: searchParams?.query || "",
@@ -30,7 +32,7 @@ const Page = async ({ searchParams }: Props) => {
         <SearchForm />
       </section>
 
-      <Filters />
+      <Filters filterLinks={projectLinks} />
 
       {(searchParams?.query || searchParams?.category) && (
         <section className="flex-center mt-6 w-full flex-col sm:mt-20">

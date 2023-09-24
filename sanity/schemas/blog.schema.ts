@@ -31,19 +31,19 @@ const blogSchema = {
         }
       },
       {
-        name: 'tags',
-        title: 'Tags',
+        name: 'category',
+        title: 'Category',
         type: 'array',
         of: [{ type: 'string' }],
+        validation: (Rule: any) => Rule.required().min(1), // Ensure at least one category is selected
         options: {
           list: [
-            { title: 'Web Development', value: 'webdev' },
-            { title: 'AI', value: 'ai' },
-            { title: 'Blockchain', value: 'blockchain' },
-            { title: 'Tutorials', value: 'tutorials' },
-            // ... Add other relevant tags here
+            { title: 'Full Stack', value: 'fullstack' },
+            { title: 'Front End', value: 'frontend' },
+            { title: 'Back End', value: 'backend' },
+            { title: 'Other', value: 'other' }
           ],
-          layout: 'checkbox'
+          layout: 'checkbox' // Render as checkboxes for multiple selection
         }
       },
       {
@@ -61,7 +61,6 @@ const blogSchema = {
           list: [
             { title: 'Medium', value: 'medium' },
             { title: 'Dev.to', value: 'dev.to' },
-            // ... Add other platforms as needed
           ],
         }
       },

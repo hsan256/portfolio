@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { FC, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { formUrlQuery } from "@/sanity/utils";
 
-const links = ["all", "fullstack", "frontend", "backend", "blockchain", "ai"];
+interface FiltersProps {
+  filterLinks: string[];
+}
 
-const Filters = () => {
+const Filters: FC<FiltersProps> = ({ filterLinks }) => {
   const [active, setActive] = useState("");
-  const searchParms = useSearchParams();
+  const searchParams = useSearchParams();
   const router = useRouter();
 
   const handleFilter = (link: string) => {
@@ -18,14 +20,14 @@ const Filters = () => {
       setActive("");
 
       newUrl = formUrlQuery({
-        params: searchParms.toString(),
+        params: searchParams.toString(),
         keysToRemove: ["category"],
       });
     } else {
       setActive(link);
 
       newUrl = formUrlQuery({
-        params: searchParms.toString(),
+        params: searchParams.toString(),
         key: "category",
         value: link.toLowerCase(),
       });
@@ -36,7 +38,7 @@ const Filters = () => {
 
   return (
     <ul className="text-white-800 body-text no-scrollbar flex w-full max-w-full gap-2 overflow-auto py-12 sm:max-w-2xl">
-      {links.map((link) => (
+      {filterLinks.map((link) => (
         <button
           key={link}
           onClick={() => handleFilter(link)}
