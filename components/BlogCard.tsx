@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AiFillEye, AiOutlineFieldTime } from "react-icons/ai";
 
 interface Props {
   id: string;
@@ -22,7 +23,7 @@ const BlogCard = ({
   originalLink,
   author,
   publishedDate,
-  excerpt
+  excerpt,
 }: Props) => {
   return (
     <Card className="shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50 w-full max-w-[400px] rounded-xl border border-black-400 bg-black-200/80 p-3 mb-5">
@@ -45,11 +46,11 @@ const BlogCard = ({
         </Link>
 
         <p className="text-sm text-white-500 line-clamp-3">{excerpt}</p>
-        
+
         <div className="flex items-center justify-between gap-3 pt-2">
           <div className="flex items-center gap-1.5">
-            <Image src="/view.svg" width={20} height={20} alt="views" />
-            <span className="text-white">0</span>
+            <Image src="/view.svg" width={28} height={28} alt="views" />
+            <span className="text-gray-400">{views}</span>
           </div>
 
           <Link

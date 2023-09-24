@@ -48,7 +48,9 @@ export const getProjectsPlaylist = async () => {
           githubLink,
           "image": image.asset->url,
           views,
-          category
+          category,
+          liveLink,
+          videoLink
         }
       }`
     );
@@ -77,7 +79,9 @@ export const getProjects = async (params: GetProjectsParams) => {
         "image": image.asset->url,
         views,
         slug,
-        category
+        category,
+        liveLink,
+        videoLink
       }`
     );
 
@@ -107,7 +111,8 @@ export const getBlogs = async (params: GetProjectsParams) => {
         platform,
         originalLink,
         slug,
-        category
+        category,
+        views
       }`
     );
 
@@ -130,7 +135,8 @@ export const getBlogsPlaylist = async () => {
           "coverImage": coverImage.asset->url,
           publishedDate,
           author,
-          excerpt
+          excerpt,
+          views
         }
       }`
     );

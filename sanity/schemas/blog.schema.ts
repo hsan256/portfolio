@@ -72,7 +72,13 @@ const blogSchema = {
             allowRelative: false,
             scheme: ['http', 'https']
         })
-      }
+      },
+      {
+        name: 'views',
+        title: 'Views',
+        type: 'number',
+        initialValue: 0,
+      },
     ]
 }
 

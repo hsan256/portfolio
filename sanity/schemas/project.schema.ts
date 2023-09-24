@@ -27,6 +27,11 @@ const schema = {
         type: 'url',
       },
       {
+        name: 'videoLink',
+        title: 'Video Link',
+        type: 'url',
+      },
+      {
         name: 'views',
         title: 'Views',
         type: 'number',

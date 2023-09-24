@@ -10,7 +10,15 @@ interface Props {
   searchParams: { [key: string]: string | undefined };
 }
 
-const projectLinks = ["all", "fullstack", "frontend", "backend", "blockchain", "ai", "other"];
+const projectLinks = [
+  "all",
+  "fullstack",
+  "frontend",
+  "backend",
+  "blockchain",
+  "ai",
+  "other",
+];
 
 const Page = async ({ searchParams }: Props) => {
   const projects = await getProjects({
@@ -51,6 +59,8 @@ const Page = async ({ searchParams }: Props) => {
                   image={project.image}
                   views={project.views}
                   githubLink={project.githubLink}
+                  liveLink={project.liveLink}
+                  videoLink={project.videoLink}
                 />
               ))
             ) : (
@@ -75,6 +85,8 @@ const Page = async ({ searchParams }: Props) => {
                 image={project.image}
                 views={project.views}
                 githubLink={project.githubLink}
+                liveLink={project.liveLink}
+                videoLink={project.videoLink}
               />
             ))}
           </div>
