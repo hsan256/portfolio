@@ -19,7 +19,6 @@ const blogSchema = {
         name: 'excerpt',
         title: 'Excerpt',
         type: 'text',
-        validation: (Rule: any) => Rule.max(200) // Limit to 200 characters
       },
       {
         name: 'coverImage',

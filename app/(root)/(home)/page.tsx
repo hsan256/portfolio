@@ -113,9 +113,10 @@ const Page = async () => {
         <div className="hidden md:flex items-center justify-center w-full md:w-1/2 p-4">
           <Image
             src={heroDetails.image}
-            width={300}
-            height={300}
+            width={450}
+            height={450}
             alt="Hassan's Image"
+            className="rounded-full"
           />
         </div>
       </section>
