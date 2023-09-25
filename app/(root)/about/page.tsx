@@ -1,10 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiFillMediumCircle,
-} from "react-icons/ai";
 import EmailButton from "@/components/EmailButton";
 import { getAboutMeDetails } from "@/sanity/actions";
 import SocialIcons from "@/components/SocialIcons";
@@ -19,7 +14,6 @@ interface Experience {
   currentPosition: boolean;
   timeframe: string;
 }
-
 interface Skill {
   technology: string;
   iconLink: string;
@@ -34,7 +28,6 @@ interface Strength {
 
 const page = async () => {
   const aboutMeData = await getAboutMeDetails();
-  console.log(aboutMeData)
 
   return (
     <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col overflow-hidden text-white">
@@ -230,14 +223,16 @@ const page = async () => {
               ))}
             </div>
           </article>
-          <Link
-            href="https://your-skills-assessment-platform-url.com"
-            target="_blank"
-            className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 text-white hover:bg-blue-700 flex-center mt-10 h-fit rounded-full bg-blue-500 px-6 py-4"
-          >
-            <span className="mr-2">🚀</span>
-            Check Out My Skills!
-          </Link>
+          {aboutMeData.skillsAssessmentPlatform && (
+            <Link
+              href={aboutMeData.skillsAssessmentPlatform}
+              target="_blank"
+              className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 text-white hover:bg-blue-700 flex-center mt-10 h-fit rounded-full bg-blue-500 px-6 py-4"
+            >
+              <span className="mr-2">🚀</span>
+              Check Out My Skills!
+            </Link>
+          )}
         </div>
       </section>
       {/* Strengths Section */}
@@ -270,26 +265,26 @@ const page = async () => {
       </section>
       {/* CTA Section */}
       <section className="custom-paddings inner-width">
-        <div className="max-w-screen-lg mx-auto mt-10 p-4 sm:p-8 rounded-lg bg-blue-600 shadow-xl transition-transform transform">
+        <div className="max-w-screen-lg mx-auto mt-10 p-4 sm:p-4 md:p-8 rounded-lg bg-blue-600 shadow-xl transition-transform transform">
           <div className="text-white space-y-4 sm:space-y-6 md:space-y-0 md:flex md:items-center md:justify-between">
-            <h1 className="text-xl sm:text-3xl font-bold text-center sm:text-left">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left">
               Interested in working with me?
             </h1>
 
-            <div className="flex space-x-4 mt-4 md:mt-0">
+            <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row space-x-0 sm:space-x-4 mt-4 md:mt-0">
               <Link
                 href="/contact"
                 className="flex-1 flex items-center justify-center px-6 py-3 bg-white bg-opacity-10 rounded hover:bg-opacity-20 transition-transform transform hover:scale-105 whitespace-nowrap"
               >
                 <svg
-                  className="h-6 w-6 mr-3"
+                  className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3"
                   stroke="currentColor"
                   fill="currentColor"
                   viewBox="0 0 1024 1024"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 110.8V792H136V270.8l-27.6-21.5 39.3-50.5 42.8 33.3h643.1l42.8-33.3 39.3 50.5-27.7 21.5zM833.6 232L512 482 190.4 232l-42.8-33.3-39.3 50.5 27.6 21.5 341.6 265.6a55.99 55.99 0 0 0 68.7 0L888 270.8l27.6-21.5-39.3-50.5-42.7 33.2z"></path>
-                </svg>{" "}
+                </svg>
                 Contact Me
               </Link>
               <Link

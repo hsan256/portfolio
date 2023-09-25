@@ -55,7 +55,7 @@ const aboutMe = {
                     }
                 }
             ]
-        },        
+        },
         // Experience Section
         {
             name: "experiences",
@@ -131,6 +131,12 @@ const aboutMe = {
                     ]
                 }
             ]
+        },
+        {
+            name: "skillsAssessmentPlatform",
+            title: "Skills Assessment Platform",
+            type: "url",
+            description: "Link to the skills assessment platform.",
         },
         // Strengths Section
         {

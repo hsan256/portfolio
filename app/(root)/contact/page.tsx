@@ -36,7 +36,7 @@ function Page() {
                   required
                   type="text"
                   id="nameInput"
-                  className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-gray-500 text-gray-900"
+                  className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-white"
                   placeholder="Your Name *"
                 />
               </div>
@@ -46,7 +46,7 @@ function Page() {
                   required
                   type="email"
                   id="emailInput"
-                  className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-gray-500 text-gray-900"
+                  className="w-full px-4 py-2 bg-opacity-10 border rounded-md placeholder-white"
                   placeholder="Your Email *"
                 />
               </div>
@@ -55,7 +55,7 @@ function Page() {
                   name="message"
                   required
                   id="messageTextarea"
-                  className="w-full px-4 py-2 h-36 bg-opacity-10 border rounded-md placeholder-gray-500 text-gray-900"
+                  className="w-full px-4 py-2 h-36 bg-opacity-10 border rounded-md placeholder-white"
                   placeholder="Your Message *"
                 ></textarea>
               </div>

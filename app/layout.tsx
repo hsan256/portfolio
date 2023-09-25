@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   other: {
     'theme-color': '#0d1117',
     "color-scheme": "dark only",
-    // "twitter:image": 'https://',
+    "twitter:image": 'https://i.ibb.co/DV3hR0x/homepage-thumbnail.png',
     "twitter:card": "summary_large_image",
     "og:url": "hassan-trabelsi.me",
-    // "og:image": 'https://',
+    "og:image": 'https://i.ibb.co/DV3hR0x/homepage-thumbnail.png',
     "og:type": "website",
   }
 }

@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const getNavLinkClass = (path: string): string => {
     return pathname === path
@@ -26,8 +28,22 @@ const Navbar = () => {
           width={30}
           height={30}
           alt="Hamburger menu"
-          className="block md:hidden"
+          className="block md:hidden cursor-pointer"
+          onClick={() => setIsOpen(!isOpen)}  // Toggle menu
         />
+
+        {/* Mobile menu */}
+        {isOpen && (
+          <div className="absolute top-full left-0 w-full bg-black-100 md:hidden">
+            <ul className="flex-center flex-col gap-y-3 py-4 px-6">
+              {["/", "/work", "/blogs", "/about", "/contact"].map(path => (
+                <li className={getNavLinkClass(path)} key={path}>
+                  <Link href={path}>{path.replace("/", "") || "Home"}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <ul className="flex-center gap-x-3 max-md:hidden md:gap-x-10">
           <li className={getNavLinkClass("/")}>

@@ -37,7 +37,7 @@ const ProjectCard = ({
               alt={title}
             />
           </div>
-          <CardTitle className="text-white paragraph-semibold line-clamp-2 w-full text-left">
+          <CardTitle className="text-white paragraph-semibold line-clamp-1 w-full text-left">
             {title}
           </CardTitle>
         </CardHeader>
